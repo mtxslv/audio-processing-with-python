@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "audio-processing-with-python"
+version = "0.1.0"
+description = ""
+authors = ["Mateus Assis <mateus.d.assis.silva@gmail.com>"]
+readme = "README.md"
+packages = [{include = "audio_processing_with_python"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
