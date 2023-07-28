@@ -7,7 +7,9 @@ readme = "README.md"
 packages = [{include = "audio_processing_with_python"}]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.9,<3.13"
+scipy = "^1.11.1"
+matplotlib = "^3.7.2"
 
 
 [build-system]
