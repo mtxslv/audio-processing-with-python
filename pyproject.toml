@@ -12,6 +12,14 @@ scipy = "^1.11.1"
 matplotlib = "^3.7.2"
 
 
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.25.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
