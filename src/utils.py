@@ -1,9 +1,11 @@
+from pathlib import Path
+
 import matplotlib.pyplot as plt
 import numpy as np
-from pathlib import Path
 from scipy.io import wavfile
 from scipy.fft import fft, fftfreq
 from scipy.signal import convolve, fftconvolve, filtfilt, iirnotch
+
 
 def get_audio(audio_path: Path) -> tuple:
     """
@@ -27,6 +29,10 @@ def get_audio(audio_path: Path) -> tuple:
     duration = data.shape[0]/sample_rate
     return data, sample_rate, duration
 
+def write_audio(file_path: Path, normalized_audio: np.ndarray, sample_rate: int) -> None:
+    wavfile.write(str(file_path), sample_rate, normalized_audio)
+
+
 def plot_audio_in_time(data:np.array, sample_rate: int, duration: float, plot_title:str = 'Audio File'):
     """
     Plots the audio signal in time.
@@ -49,7 +55,8 @@ def plot_audio_in_time(data:np.array, sample_rate: int, duration: float, plot_ti
     plt.show()
 
 def normalize_samples(samples: np.ndarray, 
-                      bits:int = 16) -> np.ndarray:
+                      bits:int = 16,
+                      use_abs: bool = False) -> np.ndarray:
     """
     Normalize samples in the range of a given representation.
 
@@ -66,7 +73,8 @@ def normalize_samples(samples: np.ndarray,
         Normalized samples.
     """
     scaler = 2**(bits-1)-1 # subtract 1 because half of the bits representation is positive.
-    normalized_tone = np.int16((samples / samples.max()) * scaler)
+    base = np.abs(samples.max()) if use_abs else samples.max()
+    normalized_tone = np.int16((samples / base) * scaler)
     return normalized_tone
 
 def get_fft_transform(normalized_samples: np.ndarray,
