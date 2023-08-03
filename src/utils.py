@@ -3,7 +3,7 @@ import numpy as np
 from pathlib import Path
 from scipy.io import wavfile
 from scipy.fft import fft, fftfreq
-from scipy.signal import convolve, fftconvolve
+from scipy.signal import convolve, fftconvolve, filtfilt, iirnotch
 
 def get_audio(audio_path: Path) -> tuple:
     """
@@ -120,3 +120,32 @@ def plot_audio_in_frequency(xf: np.ndarray,
     plt.ylabel(f'Magnitude')
     plt.plot(xf, np.abs(yf))
     plt.show()
+
+def filter_audio(original_audio: np.ndarray, 
+                 frequencies_to_remove: list,
+                 sample_rate: float, 
+                 quality_factor: float = 30.0) -> np.ndarray:
+    """
+    Remove frequencies from audio signal.
+
+    Parameters
+    ----------
+    original_audio : np.ndarray
+        Audio signal to be filtered.
+    frequencies_to_remove : list
+        List of frequencies to be removed from audio signal.
+    sample_rate : float
+        Sample rate of audio signal.
+    quality_factor : float
+        Used for signal processing.
+
+    Returns
+    -------
+    filtered_audio : np.ndarray
+        Filtered audio signal.
+    """
+    filtered_audio = np.copy(original_audio)
+    for frequency in frequencies_to_remove:
+         b, a = iirnotch(frequency, quality_factor, sample_rate)
+         filtered_audio = filtfilt(b, a, filtered_audio)
+    return filtered_audio
