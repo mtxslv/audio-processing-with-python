@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "audio-processing-with-python"
+name = "audio-processing"
 version = "0.1.0"
 description = ""
 authors = ["Mateus Assis <mateus.d.assis.silva@gmail.com>"]
 readme = "README.md"
-packages = [{include = "audio_processing_with_python"}]
+packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.9,<3.13"
