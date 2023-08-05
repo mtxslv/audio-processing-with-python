@@ -145,7 +145,7 @@ def filter_audio(original_audio: np.ndarray,
     sample_rate : float
         Sample rate of audio signal.
     quality_factor : float
-        Used for signal processing.
+        The larger the narower is the stop band. The lower the wider is the stop band. Default to 30.0. 
 
     Returns
     -------
