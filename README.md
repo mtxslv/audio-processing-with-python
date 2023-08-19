@@ -24,7 +24,6 @@ Visão geral do repositório:
 │       └── mario_and_cup.wav
 ├── audio-processing-with-python.pptx          # Slides
 ├── notebooks                                  # Os experimentos 
-│   ├── audio_experiments.ipynb
 │   ├── end_to_end_processing.ipynb
 │   └── toy_example.ipynb
 ├── poetry.lock
@@ -83,7 +82,6 @@ Repository overview:
 │       └── mario_and_cup.wav
 ├── audio-processing-with-python.pptx          # Slides
 ├── notebooks                                  # Experiments 
-│   ├── audio_experiments.ipynb
 │   ├── end_to_end_processing.ipynb
 │   └── toy_example.ipynb
 ├── poetry.lock
