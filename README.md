@@ -120,10 +120,19 @@ And then you're all set to run the aforementioned Jupyter files!
 
 # 📚 References / Referências 📚
 
+- Som de taça / _cup sound how to_
+    - https://youtu.be/80tmW5n5J-U
+
 - Visualizando Fourier / _Visualizing Fourier_:
     - https://commons.wikimedia.org/wiki/File:Fourier_synthesis_square_wave_animated.gif
     - https://commons.wikimedia.org/wiki/File:Fourier_series_square_wave_circles_animation.gif
     - https://commons.wikimedia.org/wiki/File:Fourier_series_and_transform.gif
+    - https://canlab.github.io/_pages/tutorials/html/sin_cos_fft.html
+
+- Tutoriais / _Tutorials_
+    - https://numpy.org/doc/stable/reference/routines.fft.html
+    - https://realpython.com/python-scipy-fft/
+    - https://stackoverflow.com/questions/10357992/how-to-generate-audio-from-a-numpy-array
 
 - Experimentos no Chrome Music Lab / _Chrome Music Lab Experiments_:
     - https://musiclab.chromeexperiments.com/
@@ -135,6 +144,6 @@ And then you're all set to run the aforementioned Jupyter files!
 
 - Arquivos de Resposta ao Impulso / _Impulse Response Files_
     - https://www.voxengo.com/product/imodeler/
-    > Nota: o projeto da Voxengo que disponibilizou os efeitos sonoros foi descontinuado. Alguns destes efeitos se encontram na pasta [./audio-files/impulse-responses/](./audio-files/impulse-responses/) junto ao arquivo de licença.
+    > Nota: o projeto da Voxengo que disponibilizou os efeitos sonoros foi descontinuado (inclusive [seu website está inativo](https://www.voxengo.com/impulses/)). Alguns destes efeitos se encontram na pasta [./audio-files/impulse-responses/](./audio-files/impulse-responses/) junto ao arquivo de licença.
 
-    > Note: The Voxengo's project which created and distributed the sound effects was discontinued. Some of its files can be found at [./audio-files/impulse-responses/](./audio-files/impulse-responses/), as well as the license file.
+    > Note: The Voxengo's project which created and distributed the sound effects was discontinued ([website not available](https://www.voxengo.com/impulses/)). Some of its files can be found at [./audio-files/impulse-responses/](./audio-files/impulse-responses/), as well as the license file.
